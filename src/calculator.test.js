@@ -19,3 +19,7 @@ it("Should return the sum of multiple numbers", () => {
 it("Should return the sum of two numbers that are sepperated by newline ", () => {
   expect(add("1,2\n3")).toBe(6);
 });
+
+it("Should throw error on negative number", () => {
+    expect(() => add("-1,-2")).toThrow('Negatives not allowed: -1,-2');
+});

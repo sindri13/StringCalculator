@@ -23,3 +23,7 @@ it("Should return the sum of two numbers that are sepperated by newline ", () =>
 it("Should throw error on negative number", () => {
     expect(() => add("-1,-2")).toThrow('Negatives not allowed: -1,-2');
 });
+
+it("Should throw error on negative number", () => {
+    expect(() => add("2,-4,3,-5")).toThrow('Negatives not allowed: -4,-5');
+});

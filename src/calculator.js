@@ -17,6 +17,11 @@ function sum(numbersArray){
   var total = 0;
   for(var i = 0; i < numbersArray.length; i++)
   {
+      if(numbersArray[i] > 1000)
+      {
+  				numbersArray.splice(i, 1);
+      }
+
       total += parseInt(numbersArray[i]);
   }
   return parseInt(total)

@@ -24,6 +24,10 @@ it("Should throw error on negative number", () => {
     expect(() => add("-1,-2")).toThrow('Negatives not allowed: -1,-2');
 });
 
-it("Should throw error on negative number", () => {
+it("Should throw error on negative number when also given positive numbers", () => {
     expect(() => add("2,-4,3,-5")).toThrow('Negatives not allowed: -4,-5');
+});
+
+it("Should ignore numbers over 1000", () => {
+    expect(add("1001,2")).toBe(2);
 });
